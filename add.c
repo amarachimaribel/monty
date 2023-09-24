@@ -5,10 +5,10 @@
  * @counter: line_number
  * Return: do not return
 */
-void f_add(stack_t **head, unsigned int counter)
+void f_add(unsigned int counter, stack_t **head)
 {
 	stack_t *h;
-	int len = 0, aux;
+	int len = 0, auxx;
 
 	h = *head;
 	while (h)
@@ -25,7 +25,7 @@ void f_add(stack_t **head, unsigned int counter)
 		exit(EXIT_FAILURE);
 	}
 	h = *head;
-	aux = h->n + h->next->n;
+	auxx = h->n + h->next->n;
 	h->next->n = aux;
 	*head = h->next;
 	free(h);
