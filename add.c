@@ -5,18 +5,18 @@
  * @counter: line_number
  * Return: do not return
 */
-void f_add(unsigned int counter, stack_t **head)
+void f_add(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
-	int len = 0, aux;
+	int length = 0, aux;
 
 	h = *head;
 	while (h)
 	{
 		h = h->next;
-		len++;
+		lenght++;
 	}
-	if (len < 2)
+	if (length < 2)
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", counter);
 		fclose(bus.file);
