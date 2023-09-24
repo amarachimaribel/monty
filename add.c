@@ -20,7 +20,7 @@ void f_add(stack_t **head, unsigned int counter)
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", counter);
 		fclose(bus.file);
-		fiee(bus.content);
+		free(bus.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
